@@ -8,12 +8,15 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-image: url("Images/eternal.png");
+      background-image: url("images/eternal.png"); 
       background-color: #f3f4f6;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     .login-wrapper {
@@ -33,7 +36,7 @@
 
     .login-wrapper input {
       width: 100%;
-      padding: 12px 0;
+      padding: 12px 10px;
       margin: 8px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -56,9 +59,10 @@
       background-color: #0056b3;
     }
 
-    .login-wrapper .message {
+    .message {
       text-align: center;
       margin-top: 10px;
+      font-weight: 600;
     }
 
     .message.success {
@@ -71,70 +75,43 @@
 
     .formlogo {
       text-align: center;
+      margin-bottom: 15px;
     }
 
     .formlogo img {
-      width: 25%;
+      width: 100px;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .links a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="login-wrapper">
-    <div class="formlogo"><img src="images/eternal.png" alt="formlogo"></div>
-    <h2>Reset Password</h2>
-    <input type="email" id="resetEmail" placeholder="Enter your email" />
-    <button onclick="resetPassword()">Send Reset Email</button>
-    <div id="resetMessage" class="message"></div>
-    <div class="links" style="text-align: center; margin-top: 15px;">
-      <a href="login.html">Back to Login</a>
+    <div class="login-wrapper">
+      <div class="formlogo">
+        <img src="images/eternal.png" alt="formlogo">
+      </div>
+          <h2>Reset Password</h2>
+        <input type="email" id="resetEmail" placeholder="Enter your email" />
+        <button id="resetBtn">Send Reset Email</button>
+        <div id="resetMessage" class="message"></div>
+        <div class="links">
+          <a href="login.html">Back to Login</a>
+        </div>
     </div>
-  </div>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
-    import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-auth.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyCnvwSM2KK9JR7k3n7H1rGa6UaF7b0CA90",
-      authDomain: "etfs-51c62.firebaseapp.com",
-      projectId: "etfs-51c62",
-      storageBucket: "etfs-51c62.firebasestorage.app",
-      messagingSenderId: "410894331276",
-      appId: "1:410894331276:web:fa778466b6146d0499baa9",
-      measurementId: "G-Y8N951FX2N"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    window.resetPassword = async function () {
-      const email = document.getElementById("resetEmail").value.trim();
-      const messageDiv = document.getElementById("resetMessage");
-      messageDiv.textContent = "";
-      messageDiv.className = "message";
-
-      if (!email) {
-        messageDiv.textContent = "Please enter your email address.";
-        messageDiv.classList.add("error");
-        return;
-      }
-
-      try {
-        await sendPasswordResetEmail(auth, email);
-        messageDiv.textContent = "Password reset email sent. Please check your inbox.";
-        messageDiv.classList.add("success");
-      } catch (error) {
-        console.error("Reset error:", error.code);
-        if (error.code === "auth/user-not-found") {
-          messageDiv.textContent = "No account found with that email.";
-        } else if (error.code === "auth/invalid-email") {
-          messageDiv.textContent = "Invalid email address.";
-        } else {
-          messageDiv.textContent = "Failed to send reset email.";
-        }
-        messageDiv.classList.add("error");
-      }
-    };
-  </script>
+    <script type="module" src="database/forgot.js"></script>
+</body>
 </body>
 </html>
