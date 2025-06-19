@@ -50,8 +50,11 @@
         
     </div>
  
-    
-        <h1>Eternal Rest Funeral Services</h1>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
+            <h1>Eternal Rest Funeral Services</h1>
+            <a class="login-button" href="login.html">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a>
+        </div>
+
   
 
     <section>
@@ -112,47 +115,59 @@
         </div>
     </section>
     
-    <section>
+   </section>
+            <p class="Age-limit">Waiting period is 6 Months | Age limit is 90. T’s & C’s Apply</p>
+            <section>
 
-        <h2 class="logo-casket">PURCHASE A CASKET</h2>
-        <div class="product-container">
-            <div class="product">
-                <div class="coffin-title">Cherry Coffin Casket</div>
-                <img src="images/coffin-american-cherry-casket-300x300.jpg" alt="Cherry Coffin Caskets">
-                <div class="coffin-price">R10 000</div>
-            </div>
+                <h2 class="logo-casket">PURCHASE A CASKET</h2>
+                <div class="product-container">
+                    <div class="product">
+                        <div class="coffin-title">Cherry Coffin Casket</div>
+                        <img src="images/coffin-american-cherry-casket-300x300.jpg" alt="Cherry Coffin Caskets">
+                        <div class="coffin-price">R10 000</div>
+                    </div>
+                    
+                    <div class="product">
+                        <div class="coffin-title">White Chased  Casket</div>
+                        <img id="myImage" src="images/coffin-american-chased-white-casket.jpg-300x300.jpg" alt="white chased solid casket">
+                        <div class="coffin-price">R15 000</div>
+                    
+                    </div>
+                    
+                    <div class="product">
+                        <div class="coffin-title">Golden Midnight Casket</div>
+                        <img src="images/golden-midnight-brushed-steel-american-casket-coffin-300x300.jpg" alt="Goden Midnight Brushed Casket">
+                        <div class="coffin-price">R17 000</div>
+                    </div>
+                    
+                    <div class="product">
+                        <div class="coffin-title">Neptune Orchid Casket</div>
+                        <img src="images/neptuneorchid-300x300 (1).jpg" alt="Neptune Orchid Casket">
+                        <div class="coffin-price">R25 000</div>
+                    </div>
+                    
+                    <div class="product">
+                        <div class="coffin-title">Virginia Mate Casket</div>
+                        <img src="images/virginia-300x300.jpg" alt="Virginia Casket">
+                        <div class="coffin-price">R50 000</div>
+                    </div>
+                </div>
+            </section>
             
-            <div class="product">
-                <div class="coffin-title">White Chased  Casket</div>
-                <img id="myImage" src="images/coffin-american-chased-white-casket.jpg-300x300.jpg" alt="white chased solid casket">
-                <div class="coffin-price">R15 000</div>
-            
-            </div>
-            
-            <div class="product">
-                <div class="coffin-title">Goden Midnight Casket</div>
-                <img src="images/golden-midnight-brushed-steel-american-casket-coffin-300x300.jpg" alt="Goden Midnight Brushed Casket">
-                <div class="coffin-price">R17 000</div>
-            </div>
-            
-            <div class="product">
-                <div class="coffin-title">Neptune Orchid Casket</div>
-                <img src="images/neptuneorchid-300x300 (1).jpg" alt="Neptune Orchid Casket">
-                <div class="coffin-price">R25 000</div>
-            </div>
-            
-            <div class="product">
-                <div class="coffin-title">Virginia Mate Casket</div>
-                <img src="images/virginia-300x300.jpg" alt="Virginia Casket">
-                <div class="coffin-price">R50 000</div>
-            </div>
-        </div>
-    </section>
     <video autoplay muted loop id="bg-video">
         <source src="videos/607722_People_Middle-aged_1920x1080.mp4" type="video/mp4">
     </video>
-    <footer>
-        <p class="copyright">&copy;2025 Eternal Rest Funeral Services</p>
+   <footer>
+        <p class="copyright">&copy;<span id="year"></span> Eternal Rest Funeral Services</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const yearSpan = document.getElementById("year");
+         const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+     });
+    </script>
+    
 </body>
 </html>

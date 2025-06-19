@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up | ERFS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("Images/eternal.png");
+      background-color: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-wrapper {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .login-wrapper h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+
+    .login-wrapper input {
+      width: 100%;
+      padding: 12px 0;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .login-wrapper button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-wrapper button:hover {
+      background-color: #0056b3;
+    }
+
+    .login-wrapper .links {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-wrapper .links a {
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .login-wrapper .links a:hover {
+      text-decoration: underline;
+    }
+
+    .login-wrapper .error {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .login-wrapper .success {
+      color: green;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .formlogo {
+      text-align: center;
+    }
+
+    .formlogo img {
+      width: 25%;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="formlogo"><img src="Images/eternal.png" alt="formlogo" /></div>
+    <h2>Sign Up</h2>
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="text" id="contact" placeholder="Contact Number" />
+    <input type="password" id="password" placeholder="Password" />
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+    <button onclick="signup()">Create Account</button>
+    <div class="error" id="errorMsg"></div>
+    <div class="success" id="successMsg"></div>
+
+    <div class="links">
+      <a href="login.html">Already have an account? Login</a>
+    </div>
+  </div>
+
+  <script type="module" src="database/signup.js"></script>
+
+</body>
+</html>

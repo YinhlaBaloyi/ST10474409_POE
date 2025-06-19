@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delete Account | ERFS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    .delete-container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .delete-container h2 {
+      color:  #007bff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .delete-container p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .delete-container ul {
+      background-color: #fff3f3;
+      border: 1px solid #ffcccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .delete-container ul li {
+      color: #990000;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .delete-container button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .cancel-btn {
+      background-color:  #007bff;
+      color: white;
+    }
+
+    .delete-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .cancel-btn:hover {
+      background-color: #5a6268;
+    }
+
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <div class="delete-container">
+    <h2>Delete Account</h2>
+    <p>Are you sure you want to permanently delete your account?</p>
+    <p>You will lose access to the following:</p>
+
+    <ul>
+      <li>1. Access to exclusive funeral cover plans</li>
+      <li>2. Saved enquiry history and personalized support</li>
+      <li>3. Notifications about plan changes and benefits</li>
+      <li>4. Early booking privileges for funeral services</li>
+      <li>5. Loyalty benefits and future member discounts</li>
+    </ul>
+
+    <button class="cancel-btn" onclick="window.location.href='userpanel.html'">Cancel</button>
+    <button class="delete-btn" id="confirmDelete">Yes, Delete My Account</button>
+  </div>
+
+  <script type="module" src="database/delete.js"></script>
+
+</body>
+</html>

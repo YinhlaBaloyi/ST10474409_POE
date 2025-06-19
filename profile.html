@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile | ERFS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    .profile-container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .profile-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+    .profile-container label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: 600;
+      color: #555;
+    }
+    .profile-container input {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .profile-container button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+    .profile-container button:hover {
+      background-color: #0056b3;
+    }
+    .msg {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .msg.error {
+      color: red;
+    }
+    .msg.success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <h2>My Profile</h2>
+    
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" placeholder="Your full name" />
+    
+    <label for="contact">Contact Number</label>
+    <input type="text" id="contact" placeholder="Your contact number" />
+    
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="Your email" />
+    
+    <button id="updateBtn">Update Profile</button>
+    
+    <div class="msg" id="message"></div>
+  </div>
+
+  <script type="module" src="database/profile.js"></script>
+</body>
+</html>
