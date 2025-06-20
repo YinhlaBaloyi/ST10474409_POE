@@ -703,3 +703,188 @@ form {
 }
 
 
+/* Full responsive styles for all screen sizes */
+
+@media (max-width: 1024px) {
+  .dashboard-main {
+    margin-left: 100px;
+    padding: 20px;
+  }
+  .sidebar:hover {
+    width: 200px;
+  }
+  .overview-card {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar:hover {
+    width: 160px;
+  }
+  .dashboard-main {
+    margin-left: 60px;
+    padding: 15px;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .overview-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card {
+    max-width: 90%;
+  }
+  .service-box,
+  .product {
+    width: 90%;
+  }
+  h1 {
+    margin-left: 0;
+    font-size: 24px;
+  }
+  form {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 50px;
+  }
+  .sidebar:hover {
+    width: 140px;
+  }
+  .nav-item span {
+    display: none;
+  }
+  .dashboard-main {
+    margin-left: 50px;
+    padding: 10px;
+  }
+  .dashboard-header h1 {
+    font-size: 20px;
+  }
+  .logout-btn,
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .product-card,
+  .overview-card {
+    padding: 15px;
+  }
+  .product-card h3,
+  .overview-card h2 {
+    font-size: 16px;
+  }
+  .service-box {
+    padding: 15px;
+  }
+  .service-box h2 {
+    font-size: 18px;
+  }
+  .form-social-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .login-wrapper {
+    width: 95%;
+    padding: 15px;
+  }
+  .login-wrapper input,
+  .login-wrapper button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .login-wrapper h2 {
+    font-size: 1.2rem;
+  }
+  .login-wrapper .links a {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.login-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.login-wrapper input {
+  width: 100%;
+  padding: 12px 0;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-wrapper button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-wrapper button:hover {
+  background-color: #0056b3;
+}
+
+.login-wrapper .links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-wrapper .links a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.login-wrapper .links a:hover {
+  text-decoration: underline;
+}
+
+.login-wrapper .error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.formlogo {
+  text-align: center;
+}
+
+.formlogo img {
+  width: 25%;
+}
+
